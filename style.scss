@@ -1,0 +1,144 @@
+/* Variables */
+$primary-color: #333;
+$secondary-color: #555;
+$background-color: #f4f4f4;
+$text-color: #333;
+$header-background: #f8f9fa;
+$footer-background: #333;
+$footer-text-color: #fff;
+$link-color: #007bff;
+$link-hover-color: #0056b3;
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    display: flex; // Usar flexbox para alinear elementos en la misma fila
+    align-items: center; // Alinear verticalmente al centro
+    justify-content: space-between; // Espacio entre el logo y el menú
+    background: $header-background;
+    padding: 20px; // Espaciado interno
+    margin-bottom: 20px;
+}
+
+
+.logo-container {
+    margin-right: 20px; // Espacio entre el logo y el menú
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; // Usar flexbox para alinear elementos en línea
+    margin: 20px; // Eliminar márgenes
+    padding: 20px; // Eliminar padding
+}
+
+header nav ul li {
+    margin: 0 10px; // Espacio entre los elementos del menú
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: $link-color;
+    font-weight: bold;
+}
+
+/* Parrafo */
+header nav ul li a:hover {
+    color: $link-hover-color;
+}
+
+/* Main Content Styles */
+main {
+    background: $background-color;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+main h1 {
+    margin-bottom: 20px;
+}
+
+main p {
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background: $footer-background;
+    color: $footer-text-color;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+}
+
+section img {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Image Styles */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Grid Layout for Images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+video {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the video horizontally */
+}
+
+#logo {
+    max-width: 90px; // Ajusta el tamaño máximo del logo
+    height: auto; // Mantiene la proporción
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; // Cambia a columna en pantallas pequeñas
+        align-items: flex-start; // Alinear a la izquierda
+    }
+    
+    header nav ul {
+        display: block; // Muestra en bloque
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
